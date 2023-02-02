@@ -20,7 +20,7 @@ resource "aws_s3_bucket" "class-web-static-bucket" {
               "s3:GetObject"
           ],
           "Resource": [
-              "arn:aws:s3:::class-web-bucket-20221222/*"
+              "arn:aws:s3:::class-web-bucket-02022023/*"
           ]
       }
   ]
