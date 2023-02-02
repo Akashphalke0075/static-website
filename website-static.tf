@@ -6,7 +6,7 @@ resource "aws_s3_bucket" "class-web-static-bucket" {
     error_document = "error.html"
   }
   tags = {
-    Env = "test"
+    Env = "dev"
   }
   policy = <<EOF
 {
