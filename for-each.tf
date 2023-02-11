@@ -3,6 +3,6 @@ variable "new-user" {
 }
 
 resource "aws_iam_user" "instance-create" {
-    count = length(var.new-user)
-    name = var.new-user[count.index]
+   for_each = toset(var.new-user)
+   name = each.key 
 }
