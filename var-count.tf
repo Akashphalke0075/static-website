@@ -1,5 +1,5 @@
 variable "user-list" {
-    default = ["AKASH","VIAKS","VINOD","vikas"]
+    default = ["vipul","AKASH","VIAKS","VINOD","vikas"]
 }
 
 resource "aws_iam_user" "class-user" {
