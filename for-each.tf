@@ -1,5 +1,5 @@
 variable "new-user" {
-    default = ["akash", "vikas", "ninad"]
+    default = ["akash","rahul", "vikas", "ninad"]
 }
 
 resource "aws_iam_user" "instance-create" {
