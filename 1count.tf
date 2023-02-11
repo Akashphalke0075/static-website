@@ -1,5 +1,5 @@
 variable "user-list" {
-    default = ("Vikram","Akash","Sagar")
+    default = ["Vikram","Akash","Sagar"]
 
 }
 
