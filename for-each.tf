@@ -1,8 +1,8 @@
-variable "new-user" {
-    default = ["akash","rahul", "vikas", "ninad"]
+variable "user-list" {
+    default = ["akash", "kunal", "varun"]
 }
 
-resource "aws_iam_user" "instance-create" {
-   for_each = toset(var.new-user)
-   name = each.key 
+resource "aws_iam_user" "user-iam" {
+    for_each = toset(var.user-list)
+    name = each.key
 }
