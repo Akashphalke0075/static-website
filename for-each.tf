@@ -3,6 +3,6 @@ variable "user-list" {
 }
 
 resource "aws_iam_user" "user-iam" {
-    for_each = toset(var.user-list)
-    name = each.key
+    count = length(var.user-list)
+    name = var.user-list[count.index]
 }
