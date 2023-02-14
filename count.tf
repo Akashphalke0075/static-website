@@ -4,7 +4,7 @@ resource "aws_instance" "class-ec2" {
     count = 3
 
     tags = {
-        Name = "new-ec2[count.index]"
+        Name = "new-ec2-${count.index}"
     }
 }
 
