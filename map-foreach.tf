@@ -5,5 +5,5 @@ resource "aws_s3_bucket" "class-bucket" {
         test = "aws-bucket-14022023"
     }
     bucket = "${each.key}-${each.value}"
-    name = "${each.key}-${each.value}"
+    Name = "${each.key}-${each.value}"
 }
