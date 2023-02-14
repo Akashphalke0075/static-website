@@ -11,7 +11,7 @@
 
 
 variable "user-list" {
-    default = ["akash", "vipul", "ninad"]
+    default = ["akash", "vipul", "vikram", "ninad"]
 }
 
 resource "aws_iam_user" "pr-request" {
