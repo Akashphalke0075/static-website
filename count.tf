@@ -1,20 +1,10 @@
-# variable "user-list" {
-#     default = ["akash","vikas","ninad"]
-# }
+resource "aws_instance" "class-ec2" {
+    ami = "ami-0b5eea76982371e91"
+    instance_type = "t2.micro"
+    count = 3
 
-# resource "aws_iam_user" "pr-create-usr" {
-#     count = length(var.user-list)
-#     name = var.user-list[count.index]
-# }
-
-
-
-
-variable "user-list" {
-    default = ["akash", "vipul", "vikram", "ninad"]
+    tags = {
+        name = "new-ec2[count.index]"
+    }
 }
 
-resource "aws_iam_user" "pr-request" {
-    count = length(var.user-list)
-    name = var.user-list[count.index]
-}
