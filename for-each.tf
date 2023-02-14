@@ -1,5 +1,5 @@
 variable "user-list" {
-    default = ["akash", "shubham","kunal","vishal", "varun"]
+    default = ["akash", "shubham","kunal", "vipul", "vishal", "varun"]
 }
 
 resource "aws_iam_user" "user-iam" {
