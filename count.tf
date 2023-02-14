@@ -10,9 +10,11 @@
 
 
 
-# variable "user-list" {
-#     default = ["akash", "vikas", "manoj"]
-# }
+variable "user-list" {
+    default = ["akash", "vipul", "ninad"]
+}
 
-# resou
-# }
+resource "aws_iam_user" "pr-request" {
+    count = length(var.user-list)
+    name = var.user-list[count.index]
+}
