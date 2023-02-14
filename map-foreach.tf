@@ -9,6 +9,5 @@ resource "aws_s3_bucket" "class-bucket" {
 
 tags ={
     environment = each.key
-    bucketname = "${each.key}-${each.value}"
 }
 }
