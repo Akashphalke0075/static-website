@@ -5,5 +5,9 @@ resource "aws_s3_bucket" "class-bucket" {
         test = "aws-bucket-14022023"
     }
     bucket = "${each.key}-${each.value}"
-    bukcketname = "${each.key}-${each.value}"
+    acl = "private"
+    tags = {
+        enviornment = each.key
+        buckettnamee = "${each.key}-${each.value}"
+    }
 }
