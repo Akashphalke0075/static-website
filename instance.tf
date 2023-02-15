@@ -1,19 +1,17 @@
 resource "aws_instance" "class-ec2" {
     ami = "ami-0b5eea76982371e91"
     instance_type = "t2.micro"
-    count = 3
 
     tags = {
-        Name = "new-ec2-${count.index}"
+        Name = "us-east-demo"
     }
 }
 
-resource "aws_instance" "new-intance" {
+resource "aws_instance" "class-ec2" {
     ami = "ami-0b5eea76982371e91"
     instance_type = "t2.micro"
-    count = 3
-
+   provideer = aws.eu-west-1
     tags = {
-        Name = "new-instance-${count.index}"
+        Name = "eu-west-demo"
     }
 }
