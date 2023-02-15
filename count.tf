@@ -14,6 +14,6 @@ resource "aws_instance" "new-intance" {
     count = 3
 
     tags = {
-        Name = "new-instance-${count.inddex}"
+        Name = "new-instance-${count.index}"
     }
 }
