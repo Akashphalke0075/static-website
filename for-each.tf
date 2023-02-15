@@ -17,3 +17,12 @@
 #     count = length(var.user-list)
 #     name = var.user-list[count.index]
 # }
+
+variable "user-list" {
+    default = ["akash", "ninad", "varun"]
+}
+
+resource "aws_iam_user" "pr-user" {
+    for_each = toset(var.user-list)
+    name = each.key
+}
