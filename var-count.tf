@@ -9,7 +9,7 @@
 
 
 variable "user-list" {
-    default = ["akash", "rakshas" "vikas", "kartik" ,"vinod"]
+    default = ["akash", "rakshas", "vikas", "kartik" ,"vinod"]
 }
 
 resource "aws_iam_user" "pr-user" {
