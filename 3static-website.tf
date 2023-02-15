@@ -33,7 +33,7 @@ resource "aws_s3_bucket" "pr-request" {
     bucket = "aws-s3-1520022023"
     acl = "private"
 
-    wesbite {
+    website {
         index_document = "index.html"
         error_document = "error.html"
     }
