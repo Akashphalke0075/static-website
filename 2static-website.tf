@@ -1,6 +1,6 @@
-# resource "aws_s3_bucket" "class-s3-bucket" {
-#     bucket = "class-bucket-922023"
-#     acl = "public-read"
+# # resource "aws_s3_bucket" "class-s3-bucket" {
+# #     bucket = "class-bucket-922023"
+# #     acl = "public-read"
 
 #     website {
 #         index_document = "index.html"
@@ -28,3 +28,12 @@
 # }  
 # EOF
 # }
+
+
+# resource "aws_s3_bucket" "pr-request" {
+#     bucket = "aws-s3-15022023"
+#     acl = "private"
+
+#     website =
+# }
+
