@@ -1,4 +1,4 @@
-resource "aws_instance" "class-ec2" {
+resource "aws_instance" "class-ec2-instance" {
     ami = "ami-0b5eea76982371e91"
     instance_type = "t2.micro"
 
@@ -7,7 +7,7 @@ resource "aws_instance" "class-ec2" {
     }
 }
 
-resource "aws_instance" "class-ec2" {
+resource "aws_instance" "class-ec2-instance" {
     ami = "ami-0b5eea76982371e91"
     instance_type = "t2.micro"
    provideer = aws.eu-west-1
