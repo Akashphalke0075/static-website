@@ -14,9 +14,9 @@
 
 resource "aws_s3_bucket" "class-bucket" {
     for_each = {
-        dev = "aws-bucket-2023"
-        prod = "aws-bucket-2023"
-        test = "aws-bucket-2023"
+        dev = "aws-bucket-new-2023"
+        prod = "aws-bucket-new-2023"
+        test = "aws-bucket-new-2023"
     }
     bucket = "${each.key}-${each.value}"
     acl = "private"
