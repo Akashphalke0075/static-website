@@ -6,9 +6,9 @@ resource "aws_instance" "class-ec2-instance" {
         Name = "lifecycle-instance-new"
     }
 
-    lifecycle {
-        prevent_destroy = true
-    }
+    # lifecycle {
+    #     prevent_destroy = true
+    # }
 #   lifecycle {
 #     create_before_destroy = true
 #   }
@@ -19,7 +19,7 @@ resource "aws_instance" "class-ec2-instance" {
 #     ]
 # }
 
-# lifecycle {
-#     prevent_destroy = true
-# }
+lifecycle {
+    prevent_destroy = true
+}
 }
