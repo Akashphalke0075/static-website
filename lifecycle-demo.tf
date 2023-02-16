@@ -9,9 +9,13 @@ resource "aws_instance" "class-ec2-instance" {
 #     create_before_destroy = true
 #   }
 
+# lifecycle {
+#     ignore_changes = [
+#         tags
+#     ]
+# }
+
 lifecycle {
-    ignore_changes = [
-        tags
-    ]
+    prevent_destroy = true
 }
 }
