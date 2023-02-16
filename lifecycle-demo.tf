@@ -5,7 +5,5 @@ resource "aws_instance" "class-ec2-instance" {
     tags = {
         Name = "us-east-demo"
     }
-    lifecycle {
-        
-    }
+
 }
