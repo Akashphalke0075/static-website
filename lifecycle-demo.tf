@@ -43,7 +43,7 @@ resource "aws_instance" "class-ec2" {
     #     ]
     # }
     
-    lifecycle {
-        prevent_destroy = true
-    }
+    # lifecycle {
+    #     prevent_destroy = true
+    # }
 }
