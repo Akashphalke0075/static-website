@@ -33,4 +33,7 @@ resource "aws_instance" "class-ec2" {
     tags = {
         Name = "dev-dept"
     }
+    lifecycle {
+        create_before_destroy = true
+    }
 }
