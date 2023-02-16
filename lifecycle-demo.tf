@@ -5,7 +5,13 @@ resource "aws_instance" "class-ec2-instance" {
     tags = {
         Name = "lifecycle-instance-new"
     }
-  lifecycle {
-    create_before_destroy = true
-  }
+#   lifecycle {
+#     create_before_destroy = true
+#   }
+
+lifecycle {
+    ignore_changes = [
+        tags
+    ]
+}
 }
