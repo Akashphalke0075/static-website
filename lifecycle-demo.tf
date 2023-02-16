@@ -6,22 +6,22 @@
 #         Name = "lifecycle-instance-new"
 #     }
 
-#     # lifecycle {
-#     #     prevent_destroy = true
-#     # }
-# #   lifecycle {
-# #     create_before_destroy = true
-# #   }
+#     lifecycle {
+#         prevent_destroy = true
+#     }
+#   lifecycle {
+#     create_before_destroy = true
+#   }
 
-# # lifecycle {
-# #     ignore_changes = [
-# #         tags
-# #     ]
-# # }
+# lifecycle {
+#     ignore_changes = [
+#         tags
+#     ]
+# }
 
-# # lifecycle {
-# #     prevent_destroy = true
-# # }
+# lifecycle {
+#     prevent_destroy = true
+# }
 # }
 
 
@@ -33,7 +33,13 @@ resource "aws_instance" "class-ec2" {
     tags = {
         Name = "dev-dept"
     }
+    # lifecycle {
+    #     create_before_destroy = true
+    # }
+
     lifecycle {
-        create_before_destroy = true
+        ignore_changes = [
+            tags
+        ]
     }
 }
