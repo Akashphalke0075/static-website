@@ -1,5 +1,5 @@
 variable "user_names" {
-default = ["Peter", "chris","stewie"]
+default = ["Peter", "brian"]
 }
 
 resource "aws_iam_user" "quiz_experts_user" {
